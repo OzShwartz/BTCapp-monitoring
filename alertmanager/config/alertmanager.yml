@@ -22,26 +22,27 @@ route:
 
 
 receivers:
+# inssert your url channels
   - name: 'slack-default'
     slack_configs:
-      - api_url: 'https://hooks.slack.com/services/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'
+      - api_url: 'https://hooks.slack.com/services/xxxxxxxxxx/yyyyyyyyyy/zzzzzzzzz'
         channel: '#alerts'
         send_resolved: true
 
   - name: 'slack-alerts-critical'
     slack_configs:
-      - api_url: 'https://hooks.slack.com/services/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'
+      - api_url: 'https://hooks.slack.com/services/xxxxxxxxxx/yyyyyyyyyy/zzzzzzzz'
         channel: '#alerts-critical'
         send_resolved: true
 
   - name: 'slack-alerts-high'
     slack_configs:
-      - api_url: 'https://hooks.slack.com/services/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'
+      - api_url: 'https://hooks.slack.com/services/xxxxxxxxxx/yyyyyyyyyy/zzzzzzzz'
         channel: '#alerts-high'
         send_resolved: true
 
   - name: 'test-using'
     slack_configs: 
-      - api_url: 'https://hooks.slack.com/services/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'
+      - api_url: 'https://hooks.slack.com/services/xxxxxxxxxx/yyyyyyyyyy/zzzzzzzz'
         channel: '#teat-using'
         send_resolved: true
