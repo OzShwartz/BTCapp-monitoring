@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'monitoring'
+    static_configs:
+      - targets: ['prometheus:9090', 'loki:3100', 'alertmanager:9093', 'promtail:9080']
+
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+
+  - job_name: 'BTC'
+    static_configs:
+      - targets: ['btc_app:8000']
+
+rule_files:
+  - "rules.yml"
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - alertmanager:9093
